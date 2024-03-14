@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 /*
 * @author: Kef
-* Klasse som skal håndtere databasen
+* Klasse som skal håndtere databasespørringer
 * */
 
 public class DatabaseHandler{
@@ -51,6 +51,7 @@ public class DatabaseHandler{
      */
     public boolean insertKunde(Kunde kunde){
         String sql = "INSERT INTO Kunde VALUES(?,?,?,?,?)";
+
         try{
             PreparedStatement pstm = getConnection().prepareStatement(sql);
             pstm.setInt(1, kunde.getkNr());
@@ -69,7 +70,7 @@ public class DatabaseHandler{
     /**
      * Metode som skal slette kunden
      * @param kNr
-     * @return
+     * @return true om kunden ble slettet. False om det var feil
      */
     public boolean deleteKundeByKNr(int kNr){
         String sql = "DELETE FROM Kunde WHERE kNr = ?";
@@ -100,6 +101,11 @@ public class DatabaseHandler{
         }
         return false;
     }
+
+    /**
+     * Lagrer kunde til fil. Oppretter mappe om den ikke finnes
+     * @return True om alt gikk bra, ellers False
+     */
     public boolean lagreBackup(){
         Kunde[] kundeListe = selectAllKunder();
         String fileName = "kunderegisterBackup.txt";
@@ -124,6 +130,10 @@ public class DatabaseHandler{
         return false;
     }
 
+    /**
+     * Henter data fra fil
+     * @return True om alt kjørte riktig, else False
+     */
     public boolean lastInnFraBackup(){
         String linje;
         try{
@@ -156,12 +166,13 @@ public class DatabaseHandler{
 
 
     /**
+     * Metode for å opprette kundetabellen
      * @return true if om tabbelen er opprettet
      */
     public boolean createKundeTabell(){
 
         String sql = " CREATE TABLE if not exists Kunde(" +
-                "kNr integer primary key," +
+                "kNr integer primary key AUTOINCREMENT," +
                 "navn varchar(70),"+
                 "adresse varchar(50)," +
                 "epost varchar(50)," +
