@@ -58,8 +58,8 @@ public class KunderegisterApplication extends Application {
         GridPane gridPane = new GridPane();
 
         BorderPane mainPanel = new BorderPane();
-        mainPanel.setCenter(add);
-        Scene scene = new Scene(mainPanel, 320, 240);
+        mainPanel.setCenter(kundeTableView);
+        Scene scene = new Scene(mainPanel, 250, 250);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();

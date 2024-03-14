@@ -6,5 +6,6 @@ module com.kef.kunderegister {
 
 
     opens com.kef.kunderegister to javafx.fxml;
+    opens com.kef.kunderegister.model;
     exports com.kef.kunderegister;
 }

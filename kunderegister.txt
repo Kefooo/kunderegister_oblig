@@ -1,0 +1,12 @@
+1;Rundt, Nora;Mellomlia, Bergen;norrun@hotmail.com;13151731
+2;Rike, Frank;Stien 2, Larvik;frarik@online.no;14156727
+3;Nille, Per;Sjøgata 1, Bodø;-;92921313
+4;Gark, Olli;Vannkanten, Tromsø;-;88445252
+5;Telokk, Gry;Kokeplata 5, Egersund;telegry@gmail.com;21515378
+6;Ning, Beret;Framvn. 2, Oslo;-;-
+7;Steen, Edel;Klyve, Skien;-;43615374
+8;Pleks, Per;Fugleleiken 7, Haugesund;pepe@usn.no;-
+9;Tiden, Frid;Jonslia 11B, Trondheim;-;42415271
+10;Verksemd, Anna;Dyrskuplassen, Seljord;annaverk@online.no;48131557
+11;Jal, Line;Krokvegen 34, Røros;-;-
+12;Torve, Diderik;Damstien 4, Stavern;tordid@gmail.com;22815747

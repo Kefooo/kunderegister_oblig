@@ -1,16 +1,17 @@
 package com.kef.kunderegister.controller;
 
 
+/*
+ * @author Kef
+ *
+ * Klasse som skal koble sammen GUI-et og databasespørringene
+ *
+ * */
 import com.kef.kunderegister.database.DatabaseHandler;
 import com.kef.kunderegister.model.Kunde;
+import javafx.scene.control.TableView;
 
-/*
-* Klasse som skal koble sammen GUI-et og databasespørringene
-*
-* Skjermen -> controller -> db
-* Skjermen <- controller <- db
-*
-* */
+
 public class KundeController {
 
     private final DatabaseHandler databaseHandler;
@@ -45,5 +46,9 @@ public class KundeController {
 
     public boolean opprettKundeTabell(){
         return this.databaseHandler.createKundeTabell();
+    }
+
+    public void refresh(TableView<Kunde> kundeTabell){
+        kundeTabell.refresh();
     }
 }

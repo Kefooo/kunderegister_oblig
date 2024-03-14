@@ -4,8 +4,8 @@ import java.util.Objects;
 
 
 public class Kunde {
-    private int kNr;
 
+    private int kNr;
 
     private String navn;
 
@@ -14,6 +14,47 @@ public class Kunde {
     private String epost;
 
     private String tlfNr;
+
+
+    public int getkNr() {
+        return kNr;
+    }
+
+    public void setkNr(int kNr) {
+        this.kNr = kNr;
+    }
+
+    public String getNavn() {
+        return navn;
+    }
+
+    public void setNavn(String navn) {
+        this.navn = navn;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public String getEpost() {
+        return epost;
+    }
+
+    public void setEpost(String epost) {
+        this.epost = epost;
+    }
+
+    public String getTlfNr() {
+        return tlfNr;
+    }
+
+    public void setTlfNr(String tlfNr) {
+        this.tlfNr = tlfNr;
+    }
 
     @Override
     public String toString() {
@@ -53,34 +94,6 @@ public class Kunde {
         this.tlfNr = tlfNr;
         this.epost = epost;
     }
-
-
-    public int getkNr() {
-        return kNr;
-    }
-
-    public String getNavn(){
-        return navn;
-    }
-
-    public void setNavn(String navn){
-        this.navn = navn;
-    }
-
-
-
-    public String getAdresse() {
-        return adresse;
-    }
-
-    public String getEpost() {
-        return epost;
-    }
-
-    public String getTlfNr() {
-        return tlfNr;
-    }
-
 
 
     public Kunde(){}
